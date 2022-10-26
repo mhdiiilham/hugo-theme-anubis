@@ -16,6 +16,11 @@
             </header>
         </div>
         <div class="content e-content">
+            {{ if .Params.image }}
+                <p align="center">
+                    <img src="{{ .Params.image | relURL }}" />
+                </p>
+            {{ end }}
             {{ .Content }}
         </div>
         {{ partial "post-info.html" . }}
