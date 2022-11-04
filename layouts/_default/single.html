@@ -19,6 +19,9 @@
             {{ if .Params.image }}
                 <p align="center">
                     <img src="{{ .Params.image | relURL }}" />
+                    {{ if .Params.imageSource }}
+                    <figcaption>Image From: <a href="{{ .Params.imageSource }}" target="_blank">{{ .Params.imageSource }}</a></figcaption>
+                    {{ end }}
                 </p>
             {{ end }}
             {{ .Content }}
